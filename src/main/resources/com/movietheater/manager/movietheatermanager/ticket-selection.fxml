@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.movietheater.manager.movietheatermanager.TicketController" alignment="CENTER" vgap="15" hgap="15">
+
+    <Text GridPane.columnIndex="0" GridPane.rowIndex="1">A</Text>
+    <Text GridPane.columnIndex="0" GridPane.rowIndex="2">B</Text>
+    <Text GridPane.columnIndex="0" GridPane.rowIndex="3">C</Text>
+
+    <Text GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.halignment="CENTER">1</Text>
+    <Text GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.halignment="CENTER">2</Text>
+    <Text GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.halignment="CENTER">3</Text>
+
+    <ImageView fx:id="seatA1" GridPane.columnIndex="1" GridPane.rowIndex="1" onMouseClicked='#onSeatClick'/>
+    <ImageView fx:id="seatA2" GridPane.columnIndex="2" GridPane.rowIndex="1" onMouseClicked="#onSeatClick"/>
+    <ImageView fx:id="seatA3" GridPane.columnIndex="3" GridPane.rowIndex="1" onMouseClicked="#onSeatClick"/>
+
+    <ImageView fx:id="seatB1" GridPane.columnIndex="1" GridPane.rowIndex="2" onMouseClicked="#onSeatClick"/>
+    <ImageView fx:id="seatB2" GridPane.columnIndex="2" GridPane.rowIndex="2"  onMouseClicked='#onSeatClick'/>
+    <ImageView fx:id="seatB3" GridPane.columnIndex="3" GridPane.rowIndex="2" onMouseClicked="#onSeatClick"/>
+
+    <ImageView fx:id="seatC1" GridPane.columnIndex="1" GridPane.rowIndex="3" onMouseClicked="#onSeatClick"/>
+    <ImageView fx:id="seatC2" GridPane.columnIndex="2" GridPane.rowIndex="3" onMouseClicked="#onSeatClick"/>
+    <ImageView fx:id="seatC3" GridPane.columnIndex="3" GridPane.rowIndex="3" onMouseClicked="#onSeatClick"/>
+
+
+
+    <VBox GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.halignment="CENTER">
+        <Button text="Confirmar" onAction="#finish"/>
+    </VBox>
+</GridPane>
