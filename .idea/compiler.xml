@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="MovieTheaterManager" target="18" />
+      <module name="MovieTheaterManager" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
