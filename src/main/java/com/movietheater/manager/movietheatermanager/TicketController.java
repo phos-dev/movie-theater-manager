@@ -1,20 +1,13 @@
 package com.movietheater.manager.movietheatermanager;
 
-import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 
-import java.io.Console;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import static java.lang.Thread.sleep;
 
 public class TicketController extends Observable {
 
@@ -25,7 +18,7 @@ public class TicketController extends Observable {
     @FXML
     private ImageView seatA1, seatA2, seatA3, seatB1, seatB2, seatB3, seatC1, seatC2, seatC3;
 
-    private Image freeImage, occupiedImage, takenImage;
+    private Image freeImage, occupiedImage;
     private Boolean[][] seatsOccupied;
 
     private ImageView[][] seats;
@@ -37,7 +30,6 @@ public class TicketController extends Observable {
     public void initialize() {
         occupiedImage = new Image(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("unavailable_seat.png")), 40, 40, false, false);
         freeImage = new Image(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("seat.png")), 40, 40, false, false);
-        takenImage = new Image(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("unavailable_seat_b.png")), 40, 40, false, false);
 
         seats = new ImageView[][]{
                 {seatA1, seatA2, seatA3},
@@ -128,7 +120,7 @@ public class TicketController extends Observable {
         }
     }
 
-    public void finish(Boolean[][] seatsToFinish, String name) throws InterruptedException {
+    public void finish(Boolean[][] seatsToFinish, String name) {
         ReservationRequest request = new ReservationRequest(seatsToFinish, name);
 
         synchronized (reservationQueue) {

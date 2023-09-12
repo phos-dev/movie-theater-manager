@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
-          fx:controller="com.movietheater.manager.movietheatermanager.SceneAController" alignment="CENTER" vgap="15" hgap="15">
+          fx:controller="com.movietheater.manager.movietheatermanager.SceneBController" alignment="CENTER" vgap="15" hgap="15">
 
     <Text GridPane.columnIndex="0" GridPane.rowIndex="1">A</Text>
     <Text GridPane.columnIndex="0" GridPane.rowIndex="2">B</Text>

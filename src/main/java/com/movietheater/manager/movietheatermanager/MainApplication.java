@@ -21,19 +21,11 @@ public class MainApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
-
         Stage secondStage = new Stage();
         FXMLLoader fxmlLoader2 = new FXMLLoader(MainApplication.class.getResource("ticket-selection-two.fxml"));
         Scene scene2 = new Scene(fxmlLoader2.load(), 320, 240);
         secondStage.setTitle("Sistema B");
         secondStage.setScene(scene2);
         secondStage.show();
-
-       // Stage thirdStage = new Stage();
-       // FXMLLoader fxmlLoader3 = new FXMLLoader(MainApplication.class.getResource("ticket-controller.fxml"));
-        //Scene scene3 = new Scene(fxmlLoader3.load(), 320, 240);
-        //thirdStage.setTitle("Controlador");
-        //thirdStage.setScene(scene3);
-        //thirdStage.show();
     }
 }
